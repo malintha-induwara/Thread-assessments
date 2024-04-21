@@ -1,10 +1,9 @@
 class  Calculation{
     int num;
-    public void increment(){
-        num++;
+    synchronized public void increment(){
+       num++;
     }
 }
-
 
 
 
@@ -16,6 +15,7 @@ public class Main {
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
                 cal.increment();
+                //System.out.println(cal.num);
             }
         });
 
