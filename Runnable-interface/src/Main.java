@@ -30,8 +30,11 @@ class Two implements Runnable{
 public class Main {
     public static void main(String[] args) {
 
-        Thread threadOne = new Thread(new One());
-        Thread threadTwo = new Thread(new Two());
+        Runnable one = new One();
+        Runnable two = new Two();
+
+        Thread threadOne = new Thread(one);
+        Thread threadTwo = new Thread(two);
 
         threadOne.start();
         threadTwo.start();
