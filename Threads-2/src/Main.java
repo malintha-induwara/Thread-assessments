@@ -35,7 +35,7 @@ public class Main {
 
         one.start();
         two.start();
-        
+
 
     }
 }

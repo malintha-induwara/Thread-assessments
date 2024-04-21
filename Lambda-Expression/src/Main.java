@@ -3,7 +3,7 @@ public class Main {
 
         Thread t1 = new Thread(() -> {
            for (int i = 0; i < 10; i++) {
-               System.out.println("Thread One : " + i);
+               System.out.println("Thread One : " + (i+1));
                try {
                    Thread.sleep(500);
                } catch (InterruptedException e) {
@@ -15,7 +15,7 @@ public class Main {
 
         Thread t2 = new Thread(()->{
             for (int i = 0; i < 10; i++) {
-                System.out.println("Thread Two : " + i);
+                System.out.println("Thread Two : " + (i+1));
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
@@ -26,6 +26,16 @@ public class Main {
 
 
         t1.start();
+
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        t2.start();
+
 
     }
 }

@@ -101,6 +101,5 @@ public class Main {
         new Producer(q);
         new Consumer(q);
 
-        System.out.println("Hello world!");
     }
 }
