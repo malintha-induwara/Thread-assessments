@@ -1,19 +1,17 @@
 class  Mythread extends Thread{
 
-
-
-
-
-
+    @Override
+    public void run() {
+        System.out.println("My thread started");
+    }
 }
-
-
-
 
 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Mythread mythread = new Mythread();
+        mythread.start();
+
     }
 }

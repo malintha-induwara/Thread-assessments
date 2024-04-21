@@ -8,8 +8,6 @@ class MyRunnable implements Runnable {
 
 
 
-
-
 public class Main2 {
     public static void main(String[] args) {
 
