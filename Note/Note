@@ -1,0 +1,50 @@
+The core of Concurrecy Programming  is thread
+
+thread is very important in embedded systems,
+because when using bluetooth and other things, program cant wait to get signles back
+
+
+there are two types of ways to create threads 
+1)Runnable interface
+2)Thread class
+
+it becasue if you use multi-level inhertance it eazy to implement 
+if you dont use multi level inhertance then you can just extend from Thread class
+
+Eventhough we set priority, task shedular has the final disition to deside who is to run
+
+
+Fun Facts
+
+==========
+
+to manage traffic web servers pre define connection counts, so for a example if 100 people request from the server and server is defined only for 50 request . other request put on a waiting list . after a requests service is over it hand over that connection to a waiting list connection
+
+==========
+
+A job of demon thread is to provide service to non deamon threads- we also called deamon threads as service threads
+
+
+most of them are non demon threads-- visual threads are non demon threads( threads we create)
+
+demon threads used to do background tasks -- example garbage collector
+
+a job of non demon thread is to read information and display outputs
+
+
+if there is non demon threads , demon threads has no use
+So jvm will stop all daemon threads if there is no running non daemon threads
+
+
+Further more
+
+Concurrency Programming
+Race condition
+Thread block
+Java memory module-model
+notify role
+
+
+
+
+
