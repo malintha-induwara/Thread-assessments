@@ -1,3 +1,4 @@
+package Ex1;
 
 class MyThread extends Thread{
 
