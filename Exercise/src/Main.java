@@ -13,7 +13,7 @@ class MyThread extends Thread{
             while (true){
                 System.out.println("Number is "+ i);
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     System.out.println(e);
                 }
@@ -29,14 +29,22 @@ public class Main {
 
 
         MyThread my = new MyThread("Hello");
+        my.setDaemon(true);
+
 
         System.out.println(my.getName());
         System.out.println(my.getId());
         System.out.println(my.getPriority());
         my.start();
-        my.interrupt();
         System.out.println(my.getState());
         System.out.println(my.isAlive());
+
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
 
