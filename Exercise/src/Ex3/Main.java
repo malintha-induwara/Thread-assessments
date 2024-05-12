@@ -27,15 +27,18 @@ public class Main {
         my.start();
 
 
+
+
         int j = 0 ;
 
         while (true){
             System.out.println("Number "+j + "Main ");
             j++;
-            Thread.yield();
+          //  Thread.yield();
 
 
             //Because of above line my thread get more time in the compilation
+
 
 
         }
